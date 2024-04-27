@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple to-Do list</title>
+    <style>
+        #form1{
+            border: 1px solid black;
+            background-color:rgb(63, 138, 213);
+            padding: 50px;
+        }
+        #myList{
+            color: black;
+        }
+        #my{
+            color: brown;
+        }
+        #tbt{
+            border: 1px solid black;
+            background-color: burlywood;
+            padding:30px;
+            max-width: fit-content;
+            text-align:left;
+        }
+        
+    </style>
+    <script>
+        function getInp(){
+
+            return document.getElementById("item").value;
+        }
+        function addOut(){
+            document.getElementById('myList').innerHTML+="<li>"+getInp()+"</li>";
+            document.getElementById('myList').value=" ";
+
+        }
+        function add(){
+            document.getElementById('my').innerHTML+="<li>"+getInp()+"</li>";
+            document.getElementById('my').value=" ";
+
+        }
+        
+    </script>
+</head>
+<body style="background-color: rgb(179, 76, 76);">
+    <h1>This is a simple To-Do List</h1>
+    <div id="form1">
+        <span><b>Please Enter New Item</b></span>
+        <input type="text" id="item">
+        <button onclick="addOut()">Add Item</button>
+        <button onclick="add()">Add Item in color</button>
+        <hr>
+
+        <div id="tbt">
+        <ol id="myList">
+        </ol>
+
+        <ol id="my">
+        </ol>
+    </div>
+    </div>
+</body>
+</html>
